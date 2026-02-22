@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>NTSALHO ?</title>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+}
+
+#buttons{
+    margin-top:20px;
+}
+
+button{
+    padding:10px 25px;
+    font-size:18px;
+    margin:10px;
+    cursor:pointer;
+}
+
+#non{
+    position:absolute;
+}
+</style>
+</head>
+<body>
+
+<h1>NTSALHO ?</h1>
+
+<div id="buttons">
+    <button id="oui" onclick="alert('Chu l mskhuta tahia bghaaat')">OUI</button>
+    <button id="non">NON</button>
+</div>
+
+<script>
+const non = document.getElementById("non");
+
+non.addEventListener("mouseenter", () => {
+
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    non.style.left = x + "px";
+    non.style.top  = y + "px";
+});
+</script>
+
+</body>
+</html>
